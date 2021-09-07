@@ -48,7 +48,7 @@ test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
 
 print('\nTest accuracy:', test_acc)
 
-model.save("saved_model.h5")
+# model.save("saved_model.h5")
 BUCKET = 'gs://ml-test-bucket-69'
 
 model.save(BUCKET + '/test_gpu/model')

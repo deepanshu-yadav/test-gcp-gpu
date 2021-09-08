@@ -8,6 +8,7 @@ import tensorflow as tf
 import numpy as np
 
 print(tf.__version__)
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 
 fashion_mnist = tf.keras.datasets.fashion_mnist
 
@@ -53,4 +54,4 @@ BUCKET = 'gs://ml-test-bucket-69'
 
 model.save(BUCKET + '/test_gpu/model')
 
-
+print("Uploaded trained model to {}".format(BUCKET + '/test_gpu/model'))
